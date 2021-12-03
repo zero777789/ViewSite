@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-   tableWidget[0] = new QTableWidget(10,2,this);
+  // tableWidget[0] = new QTableWidget(10,2,this);
 
     SetTab();
 }
@@ -39,7 +39,7 @@ void MainWindow::SetTab()
                QHBoxLayout *wid2Lay = new QHBoxLayout(wid2);
                wid2Lay->addWidget(new QLabel(tr("Widget2")));
 
-               // Here some third widget
+          // Here some third widget
                QWidget *wid3 = new QWidget(this);
                QHBoxLayout *wid3Lay = new QHBoxLayout(wid3);
                wid3Lay->addWidget(new QLabel(tr("Widget3")));
@@ -66,7 +66,8 @@ void MainWindow::SetTab()
                vLay->addWidget(wid3);
 
                // Some simple connect with lambda for navigation
-               connect(bar, &QTabBar::currentChanged, [=] (int index) {
+               connect(bar, &QTabBar::currentChanged, [=] (int index)
+               {
 
                    wid1->setVisible(false);
                    wid2->setVisible(false);

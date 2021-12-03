@@ -29,5 +29,6 @@ private:
     QTabBar *bar;
     QTableWidget *tableWidget[SizeTt];
     void SetTab();
+    void SetTbwiget();
 };
 #endif // MAINWINDOW_H
